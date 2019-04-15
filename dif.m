@@ -1,25 +1,30 @@
 clear,clc;
-t(1) = 0;   % Initial Time 
-X(1) = 5;   % Initial value of X
-V(1) = 1;   % Initial value of Velocity
-delt = 0.001;
-i = 1;      %Counter Variable
-M = 1;      %Value of mass
-figure(1)
-axis([-2 10 -2 2])
+t(1) = 0;           % Initial Time 
+X(1) = 3;           % Initial value of X
+Y(1) = -10;         % Initial value of Y
 
-while t <= 15
+V_X(1) = 2;         % Initial value of Velocity X
+V_Y(1) = 2;         % Initial value of Velocity Y
+
+delt = 0.001;
+i = 1;              %Counter Variable
+M = 100;            %Value of mass
+
+P = [X(1),Y(1)];
+V = [V_X(1),V_Y(1)];
+
+while t <= 10
     t(i+1) = t(i) + delt;    
-    V(i+1) = V(i)+ delt * a_x(X(i),M); % Euler's method
-    X(i+1) = X(i)+ delt * V(i);        % Simple S = S_0 + V *t
+    [P,V] = cal(P,V,M);
+    X(i) = P(1);
+    V_X(i) = V(1);
+    Y(i) = P(2);
+    V_Y(i) = V(2);
     i = i + 1;
 end
-
-A  = linspace(1,10);
-B = A.^2;
-
-plot(t,X,'b-');
-grid on;
-hold on;
-%plot(A,B, 'r--');
-hold off
+animate(X,Y);
+%plot(X,V_X,'b-');
+%hold on;
+%plot(Y,V_Y,'r-');
+%hold off
+%grid on;

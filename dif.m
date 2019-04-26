@@ -1,19 +1,23 @@
-clear,clc;
+clear,clc,clf;
 t(1) = 0;           % Initial Time 
-X1(1) = 5;          % Initial value of X body 1
+X1(1) = 10;          % Initial value of X body 1
 Y1(1) = 0;          % Initial value of Y body 1
 X2(1) = 0;
 Y2(1) = 0;
 
 V1_X(1) = 0;            % Initial value of Velocity X
-V1_Y(1) = 10;           % Initial value of Velocity Y
+V1_Y(1) = 2;           % Initial value of Velocity Y
 V2_X(1) = 0;            % Initial value of Velocity X
-V2_Y(1) = 10;           % Initial value of Velocity Y
+V2_Y(1) = 0;           % Initial value of Velocity Y
+
+
 
 delt = 10^(-3);
 i = 1;                  %Counter Variable
 M1 = 1E13;               %Value of mass
 M2 = 1E13;
+Q1 = 1E-9;
+Q2 = 1E-9;
 
 P1 = [X1(1),Y1(1)];     %Position vector
 P2 = [X2(1),Y2(1)];
@@ -23,7 +27,7 @@ V2 = [V2_X(1),V2_Y(1)]; %Velocity Vector (Body 2)
 
 while (t<10)           %Loop using time as counter
     t = t + delt;       %Increase time
-    [P1,V1,P2,V2] = cal(M1,P1,V1,M2,P2,V2);   %Updates the position and velocity vector after del_t
+    [P1,V1,P2,V2] = cal(M1,Q1,P1,V1,M2,Q2,P2,V2);   %Updates the position and velocity vector after del_t
     X1(i) = P1(1);      %Update X - coordinate
     X2(i) = P2(1);
     Y1(i) = P1(2);        %Update Y - coordinate

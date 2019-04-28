@@ -5,15 +5,18 @@ path3 = animatedline('Color','g','LineWidth' , 3);
 hold on
 
 [x,y,z] = sphere;
-x = 10 * x;
-y = 10 * y;
-z = 10 * z;
+x = 20 * x;
+y = 20 * y;
+z = 20 * z;
 
 sp1 = surf(x,y,z);
+sp1.EdgeColor = 'none';
 hold on
 sp2 = surf(x,y,z);
+sp2.EdgeColor = 'none';
 hold on
 sp3 = surf(x,y,z);
+sp3.EdgeColor = 'none';
 hold on
 set(gca, 'XLim', [-1000,1000],'YLim',[-1000,1000],'ZLim',[-1000,1000]);
 grid on

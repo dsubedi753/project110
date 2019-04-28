@@ -69,5 +69,4 @@ while (t<100)             %Loop using time as counter
     i = i + 1;            %Update counter
 end
 
-%Send the position array to animate the trajectory
 animate(X1,Y1,Z1,X2,Y2,Z2,X3,Y3,Z3);

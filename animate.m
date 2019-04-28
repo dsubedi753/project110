@@ -3,18 +3,18 @@ curve1 = animatedline('Color','b');
 curve2 = animatedline('Color','r');
 curve3 = animatedline('Color','g');
 
-set(gca, 'XLim', [-20,20],'YLim',[-20,20],'ZLim',[-20,20]);
+set(gca, 'XLim', [-1.7E8,1.7E8],'YLim',[-1.7E8,1.7E8],'ZLim',[-50,50]);
 grid on
 view(3);
 
 for i = 1:length(X1)
     addpoints(curve1,X1(i), Y1(i), Z1(i));
-    drawnow
+    drawnow limitrate
     hold on
     addpoints(curve2, X2(i), Y2(i), Z2(i));
-    drawnow
+    drawnow limitrate
     hold on
     addpoints(curve3, X3(i), Y3(i), Z3(i));
-    drawnow
+    drawnow limitrate
     hold on
 end

@@ -3,7 +3,7 @@ curve1 = animatedline('Color','b');
 curve2 = animatedline('Color','r');
 curve3 = animatedline('Color','g');
 
-set(gca, 'XLim', [-1.7E8,1.7E8],'YLim',[-1.7E8,1.7E8],'ZLim',[-50,50]);
+set(gca, 'XLim', [-50,50],'YLim',[-50,50],'ZLim',[-50,50]);
 grid on
 view(3);
 

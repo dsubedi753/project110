@@ -25,7 +25,6 @@ P2_f = P2 + V2 *del_t;
 P3_f = P3 + V3 *del_t;
 
 %R is cubed to find the unit vector
-V1_f = V1 + (FG12/M1 * del_t) + (FE12/abs(Q1) *del_t) +(FG13/M1 * del_t) + (FE13/abs(Q1) *del_t); %Equation of final velocity of M1
-V2_f = V2 - (FG12/M2 * del_t) - (FE12/abs(Q2) *del_t) -(FG23/M2 * del_t) + (FE23/abs(Q2) *del_t);   %Equation of final velocity of M1
-V3_f = V3 - (FG13/M3 * del_t) - (FE13/abs(Q3) *del_t) -(FG23/M3 * del_t) + (FE23/abs(Q3) *del_t);   %Equation of final velocity of M1
+V1_f = V1 + FG/M1 * del_t + FE/abs(Q1) *del_t; %Equation of final velocity of M1
+V2_f = V2 - FG/M2 * del_t - FE/abs(Q2) *del_t;   %Equation of final velocity of M1
 

@@ -1,9 +1,13 @@
+% This project is to demostrate the simulation of 3 body simulation.
+% The simulation takes account of Gravitational forces and electormagnetic
+% force. 
+
 clear,clc,clf;
 t(1) = 0;                % Initial Time [s]
 delt = 10^(-3);          % Time Step [s]
 i = 1;                   % Counter
 
-M1 = 1E14;               % Mass of Body 1 [kg]
+M1 = 1E18;               % Mass of Body 1 [kg]
 M2 = 1E13;               % Mass of Body 2 [kg]
 M3 = 1E13;
 
@@ -15,13 +19,13 @@ X1(1) = 0;              % Initial X-position of Body 1 [m]
 Y1(1) = 0;               % Initial Y-position of Body 1 [m]
 Z1(1) = 0;               % Initial Z-position of Body 1 [m]
 
-X2(1) = 20;               % Initial X-position of Body 2 [m]
+X2(1) = 200;               % Initial X-position of Body 2 [m]
 Y2(1) = 0;               % Initial Y-position of Body 2 [m]
 Z2(1) = 0;               % Initial Z-position of Body 2 [m]
 
 
 X3(1) = 0;               % Initial X-position of Body 3 [m]
-Y3(1) = 100;               % Initial Y-position of Body 3 [m]
+Y3(1) = 500;               % Initial Y-position of Body 3 [m]
 Z3(1) = 0;               % Initial Z-position of Body 3 [m]
 
 V1_X(1) = 0;             % Initial X-velocity of Body 1 [m/s]
@@ -29,10 +33,10 @@ V1_Y(1) = 0;             % Initial Y-velocity of Body 1 [m/s]
 V1_Z(1) = 0;             % Initial Z-velocity of Body 1 [m/s]
 
 V2_X(1) = 0;             % Initial X-velocity of Body 2 [m/s]
-V2_Y(1) = -10;             % Initial Y-velocity of Body 2 [m/s]
+V2_Y(1) = -500;             % Initial Y-velocity of Body 2 [m/s]
 V2_Z(1) = 0;            % Initial Z-velocity of Body 2 [m/s]
 
-V3_X(1) = 10;             % Initial X-velocity of Body 3 [m/s]
+V3_X(1) = 100;             % Initial X-velocity of Body 3 [m/s]
 V3_Y(1) = 0;             % Initial Y-velocity of Body 3 [m/s]
 V3_Z(1) = 0;            % Initial Z-velocity of Body 3 [m/s]
 

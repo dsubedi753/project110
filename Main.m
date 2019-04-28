@@ -21,7 +21,7 @@ Z2(1) = 0;               % Initial Z-position of Body 2 [m]
 
 
 X3(1) = 0;               % Initial X-position of Body 3 [m]
-Y3(1) = 20;               % Initial Y-position of Body 3 [m]
+Y3(1) = 100;               % Initial Y-position of Body 3 [m]
 Z3(1) = 0;               % Initial Z-position of Body 3 [m]
 
 V1_X(1) = 0;             % Initial X-velocity of Body 1 [m/s]
@@ -78,9 +78,3 @@ while (t<100)              %Loop using time as counter
 end
 
 animate(X1,Y1,Z1,X2,Y2,Z2,X3,Y3,Z3);
-%plot(X,V_X,'b-');
-%hold on;
-%plot(Y,V_Y,'r-');
-%hold off
-%grid on;
-

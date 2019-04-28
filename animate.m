@@ -3,9 +3,11 @@ curve1 = animatedline('Color','b');
 curve2 = animatedline('Color','r');
 curve3 = animatedline('Color','g');
 
-set(gca, 'XLim', [-50,50],'YLim',[-50,50],'ZLim',[-50,50]);
+set(gca, 'XLim', [-500,500],'YLim',[-500,500],'ZLim',[-500,500]);
+set (gca, 'nextplot', 'replacechildren');
 grid on
 view(3);
+
 
 for i = 1:length(X1)
     addpoints(curve1,X1(i), Y1(i), Z1(i));
@@ -17,4 +19,5 @@ for i = 1:length(X1)
     addpoints(curve3, X3(i), Y3(i), Z3(i));
     drawnow limitrate
     hold on
+    axis square
 end

@@ -1,8 +1,8 @@
 function [P1_f,V1_f,P2_f,V2_f,P3_f,V3_f] = cal(M1,Q1,P1,V1,M2,Q2,P2,V2,M3,Q3,P3,V3)
 del_t = 10^-3;
-G = 6.67E-11;   %Gravitational constant
-k = 1/(4*pi*8.8542E-12);
-%k = 0;
+G = 6.67E-11;                   %Gravitational constant
+perm = 8.8542E-12;              %Permitivity of free space
+k = 1/(4*pi*perm);
 D12 = P1 - P2;                  %Vector from body 2 to 1
 D13 = P1 - P3;                  %Vector from body 3 to 1
 D23 = P2 - P3;                  %Vector from body 3 to 2

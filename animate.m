@@ -19,6 +19,10 @@ sp3 = surf(x,y,z);
 sp3.EdgeColor = 'none';
 hold on
 set(gca, 'XLim', [-1000,1000],'YLim',[-1000,1000],'ZLim',[-1000,1000]);
+xlabel('X');
+ylabel('Y');
+zlabel('Z');
+
 grid on
 view(3);
 

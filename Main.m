@@ -9,22 +9,22 @@ i = 1;                   % Counter
 
 M1 = 1E18;               % Mass of Body 1 [kg]
 M2 = 1E14;               % Mass of Body 2 [kg]
-M3 = 1E8;
+M3 = 1E8;                % Mass of Body 3 [kg]
 
-Q1 = 1E-6;               % Charge of Body 1 [C]
-Q2 = 1E-6;               % Charge of Body 2 [C]
-Q3 = 1E-6;
+Q1 = 1E-9;               % Charge of Body 1 [C]
+Q2 = 1E-9;               % Charge of Body 2 [C]
+Q3 = 1E-9;               % Charge of Body 3 [C]
 
 X1(i) = 0;               % Initial X-position of Body 1 [m]
 Y1(i) = 0;               % Initial Y-position of Body 1 [m]
 Z1(i) = 0;               % Initial Z-position of Body 1 [m]
 
-X2(i) = 500;             % Initial X-position of Body 2 [m]
-Y2(i) = 0;               % Initial Y-position of Body 2 [m]
-Z2(i) = 0;               % Initial Z-position of Body 2 [m]
+X2(i) = 100;               % Initial X-position of Body 2 [m]
+Y2(i) = 0;             % Initial Y-position of Body 2 [m]
+Z2(i) = 174;             % Initial Z-position of Body 2 [m]
 
-X3(i) = 500;             % Initial X-position of Body 3 [m]
-Y3(i) = 0;               % Initial Y-position of Body 3 [m]
+X3(i) = 0;             % Initial X-position of Body 3 [m]
+Y3(i) = 500;               % Initial Y-position of Body 3 [m]
 Z3(i) = 0;               % Initial Z-position of Body 3 [m]
 
 V1_X = 0;                % Initial X-velocity of Body 1 [m/s]
@@ -38,8 +38,6 @@ V2_Z = 0;                % Initial Z-velocity of Body 2 [m/s]
 V3_X = 400;              % Initial X-velocity of Body 3 [m/s]
 V3_Y = 0;                % Initial Y-velocity of Body 3 [m/s]
 V3_Z = 0;                % Initial Z-velocity of Body 3 [m/s]
-
-
 
 P1 = [X1(i),Y1(i),Z1(i)];      % Position vector of Body 1
 P2 = [X2(i),Y2(i),Z2(i)];      % Position vector of Body 2
